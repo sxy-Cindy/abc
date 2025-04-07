@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class A {
+    public static void main(String[] args) {
+
+        List<Map<String, Object>> teacherList = new ArrayList<>();
+        Map<String, Object> teacher1 = new HashMap<>();
+        teacher1.put("id", 1);
+        teacher1.put("name", "A");
+        teacher1.put("age", 30);
+
+        Map<String, Object> teacher2 = new HashMap<>();
+        teacher2.put("id", 2);
+        teacher2.put("name", "B");
+        teacher2.put("age", 35);
+
+        Map<String, Object> teacher3 = new HashMap<>();
+        teacher3.put("id", 3);
+        teacher3.put("name", "C");
+        teacher3.put("age", 28);
+
+        teacherList.add(teacher1);
+        teacherList.add(teacher2);
+        teacherList.add(teacher3);
+
+
+        System.out.println("+-----+--------+-----+");
+        System.out.println("| id  |  name  | age |");
+        System.out.println("+-----+--------+-----+");
+        for (Map<String, Object> teacher : teacherList) {
+            System.out.printf("| %-3d | %-6s | %-3d |%n",
+                    teacher.get("id"),
+                    teacher.get("name"),
+                    teacher.get("age"));
+        }
+        System.out.println("+-----+--------+-----+");
+    }
+}
